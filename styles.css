@@ -35,6 +35,7 @@ body {
 .buzz:hover {
     animation: buzz 0.1s infinite alternate;
 }
+
 @keyframes buzz {
     from { transform: translateX(-1px); }
     to   { transform: translateX(1px); }
