@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: #fff8c4;
+    background: #ffffff;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
@@ -11,7 +11,7 @@ body {
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: black;
-    color: yellow;
+    color: #edb552;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +91,7 @@ body {
     bottom: 80px;
     right: 20px;
     padding: 10px 20px;
-    background: yellow;
+    background: #edb552;
     border: 2px solid black;
     border-radius: 10px;
     font-size: 0.9rem;
@@ -104,10 +104,10 @@ body {
 .bee-mode {
     background: repeating-linear-gradient(
         45deg,
-        yellow,
-        yellow 20px,
-        black 20px,
-        black 40px
+        #edb552,
+        #edb552 40px,
+        black 60px,
+        black 50px
     );
     color: white;
 }
@@ -117,7 +117,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: yellow;
+    background: #edb552;
     border: 2px solid black;
     padding: 10px 15px;
     border-radius: 10px;
