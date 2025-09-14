@@ -37,19 +37,16 @@ function showRandomFact() {
 }
 setInterval(showRandomFact, 12000);
 
-/* --- BEE MODE --- */
-document.getElementById("beeModeBtn").onclick = () => {
-    document.body.classList.toggle("bee-mode");
-};
-
 /* --- JAZZ MODE (press J) --- */
 let jazzPlaying = false;
 let jazzAudio = new Audio("https://www.dropbox.com/s/vxpl4y2x8hd8wo0/jazz.mp3?raw=1");
 
-document.addEventListener("keydown", e => {
-    if (e.key.toLowerCase() === "j") {
-        if (!jazzPlaying) jazzAudio.play();
+/* --- BEE MODE --- */
+document.getElementById("beeModeBtn").onclick = () => {
+    document.body.classList.toggle("bee-mode");
+    if (!jazzPlaying) jazzAudio.play();
         else jazzAudio.pause();
         jazzPlaying = !jazzPlaying;
-    }
-});
+};
+
+
