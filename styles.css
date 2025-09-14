@@ -43,7 +43,7 @@ body {
 /* Flying bees */
 .bee {
     position: fixed;
-    width: 40px;
+    width: 20px;
     pointer-events: none;
     z-index: 5000;
     animation: fly 12s infinite linear;
@@ -78,6 +78,7 @@ body {
     background: white;
     z-index: 9000;
 }
+
 #honeyFill {
     height: 100%;
     width: 0%;
