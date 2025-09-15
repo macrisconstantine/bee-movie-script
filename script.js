@@ -39,7 +39,7 @@ setInterval(showRandomFact, 12000);
 
 /* --- JAZZ MODE (press J) --- */
 let jazzPlaying = false;
-let jazzAudio = new Audio("https://www.dropbox.com/s/vxpl4y2x8hd8wo0/jazz.mp3?raw=1");
+let jazzAudio = new Audio("./audio/ya-like-jazz.mp3");
 
 /* --- BEE MODE --- */
 document.getElementById("beeModeBtn").onclick = () => {
