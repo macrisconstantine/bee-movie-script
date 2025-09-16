@@ -45,7 +45,7 @@ let jazzAudio = new Audio("./audio/ya-like-jazz.mp3");
 document.getElementById("beeModeBtn").onclick = () => {
     document.body.classList.toggle("bee-mode");
     if (!jazzPlaying) jazzAudio.play();
-        else jazzAudio.pause();
+    else jazzAudio.pause();
         jazzPlaying = !jazzPlaying;
 };
 
