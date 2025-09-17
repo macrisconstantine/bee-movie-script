@@ -6,13 +6,46 @@ setTimeout(() => {
     }, 2000);
 }, 2500);
 
-/* --- CURSOR-FOLLOWING BEE --- */
+// Smooth bee following using velocity + easing
+const bee = document.getElementById("cursorBee");
+
+let beeX = window.innerWidth / 2;
+let beeY = window.innerHeight / 2;
+let velX = 0;
+let velY = 0;
+
+let targetX = beeX;
+let targetY = beeY;
+
+// Track cursor position only
 document.addEventListener("mousemove", e => {
-    const bee = document.getElementById("cursorBee");
-    bee.style.left = e.pageX + "px";
-    bee.style.top  = e.pageY + "px";
+    targetX = e.pageX;
+    targetY = e.pageY;
 });
 
+// Animate the bee toward cursor
+function animateBee() {
+    const accel = 0.15;  // acceleration toward cursor
+    const damp  = 0.85;  // friction / smoothing
+
+    // accelerate toward target
+    velX += (targetX - beeX) * accel;
+    velY += (targetY - beeY) * accel;
+
+    // apply damping
+    velX *= damp;
+    velY *= damp;
+
+    // update position
+    beeX += velX * 0.05;  
+    beeY += velY * 0.05;
+
+    bee.style.left = beeX + "px";
+    bee.style.top  = beeY + "px";
+
+    requestAnimationFrame(animateBee);
+}
+animateBee();
 /* --- HONEY SCROLL GAUGE --- */
 window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
