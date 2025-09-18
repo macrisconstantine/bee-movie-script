@@ -75,7 +75,6 @@ let jazzPlaying = false;
 let jazzAudio = new Audio("./audio/ya-like-jazz.mp3");
 let jazzAudio1 = new Audio("./audio/Naima-jazz.mp3");
 
-/* --- BEE MODE --- */
 document.getElementById("beeModeBtn").onclick = () => {
     document.body.classList.toggle("bee-mode");
     if (!jazzPlaying) {
