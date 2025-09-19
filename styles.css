@@ -33,12 +33,14 @@ body {
 
 /* Buzzing hover effect */
 .buzz:hover {
-    animation: buzz 0.1s infinite alternate;
+    animation: buzz 0.3s infinite alternate;
 }
 
 @keyframes buzz {
-    from { transform: translateX(-1px); }
-    to   { transform: translateX(1px); }
+    from { transform: translateX(-1px); 
+           transform: translateY(-1px);}
+    to   { transform: translateX(1px); 
+           transform: translateY(1px);}
 }
 
 /* Flying bees */
