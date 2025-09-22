@@ -104,26 +104,64 @@ body {
     z-index: 9001;
 }
 
-/* Sexy glowing honeycomb Bee Mode */
+/* Ultimate Honeycomb Bee Mode */
 .bee-mode {
-    color: #fff8e1;
-    background: 
-        radial-gradient(circle at 50% 50%, rgba(255,200,50,0.6), rgba(255,180,0,0.2)),
-        repeating-linear-gradient(
-            60deg,
-            #f2b531 0px,
-            #f2b531 50px,
-            #000 50px,
-            #000 90px
-        );
-    z-index: -1;
-    animation: honeyGlow 3s infinite alternate;
+    color: #fff7d1;
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes honeyGlow {
-    from { filter: brightness(1); }
-    to   { filter: brightness(1.25); }
+/* Hex honeycomb background */
+.bee-mode::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+
+    background:
+        linear-gradient(60deg, #f2b531 25%, transparent 25%) 0 0,
+        linear-gradient(60deg, transparent 75%, #f2b531 75%) 0 0,
+        linear-gradient(60deg, transparent 75%, #f2b531 75%) 0 0,
+        radial-gradient(circle, rgba(255, 190, 70, .4), rgba(255,150,0,0.2));
+
+    background-size: 40px 70px;
+    background-blend-mode: overlay;
+    animation: honeyShift 6s infinite linear;
 }
+
+/* Extra glow overlay */
+.bee-mode::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(255,180,0,0.35),
+        rgba(255,140,0,0.2),
+        rgba(255,120,0,0.1)
+    );
+    filter: blur(60px);
+    animation: honeyGlow 4s infinite alternate;
+}
+
+/* Soft movement */
+@keyframes honeyShift {
+    0%   { background-position: 0 0; }
+    100% { background-position: 200px 200px; }
+}
+
+/* Pulsing brightness */
+@keyframes honeyGlow {
+    from { opacity: 0.6; }
+    to   { opacity: 1; }
+}
+
 
 /* Bee Mode button */
 #beeModeBtn {
