@@ -103,63 +103,54 @@ body {
     transition: opacity 1s;
     z-index: 9001;
 }
-
-/* Ultimate Honeycomb Bee Mode */
+/* DARK HONEYCOMB BACKGROUND — PURE CSS */
 .bee-mode {
-    color: #fff7d1;
     position: relative;
+    background: #0d0a05;          /* dark brown/black */
+    color: #f5d578;               /* honey-gold text */
     overflow: hidden;
 }
 
-/* Hex honeycomb background */
+/* hexagonal pattern */
 .bee-mode::before {
     content: "";
     position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -5;
+    inset: 0;
+    z-index: -1;
 
     background:
-        linear-gradient(60deg, #f2b531 25%, transparent 25%) 0 0,
-        linear-gradient(60deg, transparent 75%, #f2b531 75%) 0 0,
-        linear-gradient(60deg, transparent 75%, #f2b531 75%) 0 0,
-        radial-gradient(circle, rgba(255, 190, 70, .4), rgba(255,150,0,0.2));
+        conic-gradient(
+            from 30deg,
+            #1c1509 0deg 60deg,
+            #000 60deg 120deg,
+            #1c1509 120deg 180deg
+        ) 0 0 / 40px 70px repeat;
 
-    background-size: 40px 70px;
-    background-blend-mode: overlay;
-    animation: honeyShift 6s infinite linear;
+    opacity: 0.5;
+    mix-blend-mode: lighten;
 }
 
-/* Extra glow overlay */
+/* glowing soft layer */
 .bee-mode::after {
     content: "";
     position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -4;
+    inset: 0;
+    z-index: -1;
 
     background: radial-gradient(
         circle at center,
-        rgba(255,180,0,0.35),
-        rgba(255,140,0,0.2),
-        rgba(255,120,0,0.1)
+        rgba(255, 180, 0, 0.25),
+        rgba(255, 140, 0, 0.05),
+        transparent 60%
     );
-    filter: blur(60px);
-    animation: honeyGlow 4s infinite alternate;
+
+    animation: hiveGlow 3s ease-in-out infinite alternate;
+    pointer-events: none;
 }
 
-/* Soft movement */
-@keyframes honeyShift {
-    0%   { background-position: 0 0; }
-    100% { background-position: 200px 200px; }
-}
-
-/* Pulsing brightness */
-@keyframes honeyGlow {
-    from { opacity: 0.6; }
-    to   { opacity: 1; }
+@keyframes hiveGlow {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.8; }
 }
 
 
