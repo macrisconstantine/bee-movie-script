@@ -103,12 +103,14 @@ body {
     transition: opacity 1s;
     z-index: 9001;
 }
+
 /* DARK HONEYCOMB BACKGROUND — PURE CSS */
 .bee-mode {
     position: relative;
     background: #0d0a05;          /* dark brown/black */
     color: #f5d578;               /* honey-gold text */
     overflow: hidden;
+    overflow-y: auto;
 }
 
 /* hexagonal pattern */
