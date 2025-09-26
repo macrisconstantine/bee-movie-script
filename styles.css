@@ -123,13 +123,14 @@ body {
     background:
         conic-gradient(
             from 30deg,
-            #1c1509 0deg 60deg,
-            #000 60deg 120deg,
+            #000 0deg 60deg,
+            #1c1509 60deg 120deg,
             #1c1509 120deg 180deg
         ) 0 0 / 40px 70px repeat;
 
     opacity: 0.5;
     mix-blend-mode: lighten;
+    animation: hiveShift 20s linear infinite;
 }
 
 /* glowing soft layer */
@@ -138,6 +139,8 @@ body {
     position: fixed;
     inset: 0;
     z-index: -1;
+    width: 150%;
+    height: 150%;
 
     background: radial-gradient(
         circle at center,
@@ -155,6 +158,10 @@ body {
     100% { opacity: 0.8; }
 }
 
+@keyframes hiveShift {
+    0%   { background-position: 0 0; }
+    100% { background-position: 200px 200px; }
+}
 
 /* Bee Mode button */
 #beeModeBtn {
