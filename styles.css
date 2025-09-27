@@ -120,14 +120,17 @@ body {
     inset: 0;
     z-index: -1;
 
-    background:
+    background: 
         conic-gradient(
             from 30deg,
             #000 0deg 60deg,
-            #1c1509 60deg 120deg,
-            #1c1509 120deg 180deg
-        ) 0 0 / 40px 70px repeat;
-
+            #1a1408 60deg 120deg,
+            #000 120deg 180deg,
+            #1a1408 180deg 240deg,
+            #000 240deg 300deg,
+            #1a1408 300deg 360deg
+        )
+        0 0 / 40px 70px repeat;
     opacity: 0.5;
     mix-blend-mode: lighten;
     animation: hiveShift 20s linear infinite;
