@@ -88,4 +88,8 @@ document.getElementById("beeModeBtn").onclick = () => {
     jazzPlaying = !jazzPlaying;
 };
 
+function setHoneyLevel(percent) {
+    document.getElementById("honeyFill").style.height = percent + "%";
+}
+
 

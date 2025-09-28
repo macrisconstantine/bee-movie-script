@@ -68,26 +68,88 @@ body {
     z-index: 6000;
 }
 
-/* Honey gauge */
-#honeyGauge {
+/* Honey Pot Container */
+#honeyPot {
     position: fixed;
     right: 20px;
     bottom: 20px;
+
     width: 120px;
-    height: 20px;
-    border: 2px solid #cc9900;
-    border-radius: 10px;
+    height: 140px;
+
+    background: #8b4f18; /* pot clay */
+    border-radius: 60px 60px 40px 40px; /* pot shape */
+
+    border: 4px solid #5d320e;
+    box-shadow: inset 0 0 10px #3c1e06, 0 4px 10px #0005;
+
     overflow: hidden;
-    background: white;
     z-index: 9000;
 }
 
+/* Honey Fill */
 #honeyFill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0%;          /* <-- JS will animate this */
     height: 100%;
-    width: 0%;
-    background: gold;
-    transition: width 0.2s;
+
+    background: linear-gradient(
+        to top,
+        #ffcf2b,
+        #ffd950,
+        #ffe98a
+    );
+
+    box-shadow: inset 0 0 15px #e6a300;
+    transition: width 0.25s ease-out;
 }
+
+/* Glossy shine */
+.shine {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 35px;
+    height: 80px;
+
+    background: linear-gradient(135deg, #fff9, #fff2, transparent);
+    border-radius: 25px;
+    pointer-events: none;
+}
+
+/* Honey drips */
+.drip {
+    position: absolute;
+    top: 0;
+    width: 22px;
+    height: 35px;
+
+    background: #ffd950;
+    border-radius: 50% 50% 70% 70%;
+    box-shadow: inset 0 0 6px #d69b00;
+}
+
+/* Slight wobble so they feel alive */
+.drip1 {
+    left: 25px;
+    animation: dripWiggle 2.2s infinite ease-in-out;
+}
+
+.drip2 {
+    left: 65px;
+    height: 45px;
+    animation: dripWiggle 2.8s infinite ease-in-out;
+}
+
+@keyframes dripWiggle {
+    0% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(3px) rotate(2deg); }
+    100% { transform: translateY(0) rotate(-2deg); }
+}
+
 
 /* Bee facts popup */
 #beeFact {
