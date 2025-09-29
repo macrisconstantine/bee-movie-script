@@ -51,7 +51,7 @@ window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
     const docHeight = document.body.scrollHeight - window.innerHeight;
     const percent = (scrollTop / docHeight) * 100;
-    document.getElementById("honeyFill").style.width = percent + "%";
+    setHoneyLevel(percent);
 });
 
 /* --- RANDOM BEE FACTS --- */
