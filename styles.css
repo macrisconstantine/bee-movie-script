@@ -91,7 +91,7 @@ body {
 /* HONEY DROP */
 #honeyDrop {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;          /* start above the pot */
     left: 50%;                 /* center horizontally */
     transform: translateX(-50%); /* center properly */
     width: 40px;               /* width of the drop */
