@@ -93,9 +93,8 @@ body {
     position: absolute;
     bottom: 20px;          /* start above the pot */
     left: 50%;                 /* center horizontally */
-    transform: translateX(-50%); /* center properly */
-    width: 40px;               /* width of the drop */
-    height: 60px;              /* JS will adjust height */
+    width: 20px;               /* width of the drop */
+    height: 40px;              /* JS will adjust height */
     background: radial-gradient(
         ellipse at center,
         #fff2a3 0%,
@@ -104,7 +103,6 @@ body {
     );
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* rounded drop shape */
     box-shadow: inset 0 0 12px #d59f00, 0 4px 8px rgba(0,0,0,0.2);
-    transition: height 0.25s ease-out;
 }
 
 
