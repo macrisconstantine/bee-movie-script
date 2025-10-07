@@ -93,7 +93,7 @@ body {
     position: absolute;
     bottom: 20px;          /* start above the pot */
     left: 50%;                 /* center horizontally */
-    width: 20px;               /* width of the drop */
+    width: 25px;               /* width of the drop */
     height: 40px;              /* JS will adjust height */
     background: radial-gradient(
         ellipse at center,
