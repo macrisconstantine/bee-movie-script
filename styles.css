@@ -91,8 +91,8 @@ body {
 /* HONEY DROP */
 #honeyDrop {
     position: absolute;
-    bottom: 20px;          /* start above the pot */
-    left: 50%;                 /* center horizontally */
+    top: 0;         /* start above the pot */
+    left: 70px;                 /* center horizontally */
     width: 25px;               /* width of the drop */
     height: 40px;              /* JS will adjust height */
     background: radial-gradient(
@@ -101,7 +101,7 @@ body {
         #ffe066 40%,
         #ffcd24 100%
     );
-    border-radius: 50% 50% 50% 50% / 85% 85% 15% 15%; /* rounded drop shape */
+    border-radius: 0% 65% 40% 50%; /* rounded drop shape */
     box-shadow: inset 0 0 12px #d59f00, 0 4px 8px rgba(0,0,0,0.2);
 }
 
