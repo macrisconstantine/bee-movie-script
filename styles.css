@@ -101,7 +101,7 @@ body {
         #ffe066 40%,
         #ffcd24 100%
     );
-    border-radius: 0% 65% 40% 50%; /* rounded drop shape */
+    border-radius: 0% 90% 40% 50%; /* rounded drop shape */
     box-shadow: inset 0 0 12px #d59f00, 0 4px 8px rgba(0,0,0,0.2);
 }
 
