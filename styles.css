@@ -105,6 +105,23 @@ body {
     box-shadow: inset 0 0 12px #d59f00, 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* HONEY DROP */
+#honeyDrop2 {
+    position: absolute;
+    top: 0;         /* start above the pot */
+    left: 70px;                 /* center horizontally */
+    width: 25px;               /* width of the drop */
+    height: 40px;              /* JS will adjust height */
+    background: radial-gradient(
+        ellipse at center,
+        #fff2a3 0%,
+        #ffe066 40%,
+        #ffcd24 100%
+    );
+    border-radius: 10% 90% 40% 80%; /* rounded drop shape */
+    box-shadow: inset 0 0 12px #d59f00, 0 4px 8px rgba(0,0,0,0.2);
+}
+
 
 /* HONEY FILL (VERTICAL, CORRECT) */
 #honeyFill {
