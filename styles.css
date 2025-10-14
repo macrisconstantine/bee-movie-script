@@ -108,17 +108,17 @@ body {
 /* HONEY DROP */
 #honeyDrop2 {
     position: absolute;
-    top: 10px;         /* start above the pot */
-    right: 80px;                 /* center horizontally */
-    width: 15px;               /* width of the drop */
-    height: 20px;              /* JS will adjust height */
+    top: 0;         /* start above the pot */
+    right: 69px;                 /* center horizontally */
+    width: 18px;               /* width of the drop */
+    height: 29px;              /* JS will adjust height */
     background: radial-gradient(
         ellipse at center,
         #fff2a3 0%,
         #ffe066 40%,
         #ffcd24 100%
     );
-    border-radius: 90% 10% 80% 40%; /* rounded drop shape */
+    border-radius: 80% 30% 90% 40%; /* rounded drop shape */
     box-shadow: inset 0 0 12px #d59f00, 0 4px 8px rgba(0,0,0,0.2);
 }
 
