@@ -101,7 +101,7 @@ body {
         #ffe066 40%,
         #ffcd24 100%
     );
-    rotate: 190deg;
+    rotate: 200deg;
     border-radius: 50% 50% 45% 55% / 40% 40% 60% 60%; /* smoother teardrop */
     box-shadow: inset 0 0 12px #d59f00, 0 4px 8px rgba(0,0,0,0.2);
 }
