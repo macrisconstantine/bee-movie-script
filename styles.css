@@ -92,7 +92,7 @@ body {
 #honeyDrop {
     position: absolute;
     top: -5px;         /* start above the pot */
-    right: 60px;     
+    right: 65px;     
     width: 22px;    
     height: 36px;   /* JS will adjust height */
     background: radial-gradient(
