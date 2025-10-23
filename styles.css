@@ -94,7 +94,7 @@ body {
     top: -5px;         /* start above the pot */
     right: 65px;     
     width: 22px;    
-    height: 36px;   /* JS will adjust height */
+    height: 39px;   /* JS will adjust height */
     background: radial-gradient(
         ellipse at center,
         #fff2a3 0%,
