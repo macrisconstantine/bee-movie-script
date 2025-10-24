@@ -5,7 +5,6 @@ setTimeout(() => {
         document.getElementById("content").style.opacity = 1;
     }, 2000);
 }, 2500);
-
 // Smooth bee following using velocity + easing
 const bee = document.getElementById("cursorBee");
 
@@ -19,8 +18,9 @@ let targetY = beeY;
 
 // Track cursor position only
 document.addEventListener("mousemove", e => {
-    targetX = e.pageX;
-    targetY = e.pageY;
+    // Use clientX / clientY for viewport coordinates
+    targetX = e.clientX;
+    targetY = e.clientY;
 });
 
 // Animate the bee toward cursor
@@ -46,6 +46,7 @@ function animateBee() {
     requestAnimationFrame(animateBee);
 }
 animateBee();
+
 /* --- HONEY SCROLL GAUGE --- */
 window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
@@ -53,6 +54,7 @@ window.addEventListener("scroll", () => {
     const percent = (scrollTop / docHeight) * 100;
     setHoneyLevel(percent);
 });
+
 
 /* --- RANDOM BEE FACTS --- */
 const facts = [
