@@ -25,8 +25,8 @@ document.addEventListener("mousemove", e => {
 
 // Animate the bee toward cursor
 function animateBee() {
-    const accel = 0.15;  // acceleration toward cursor
-    const damp  = 0.85;  // friction / smoothing
+    const accel = 0.03;  // acceleration toward cursor
+    const damp  = 0.98;  // friction / smoothing
 
     // accelerate toward target
     velX += (targetX - beeX) * accel;
