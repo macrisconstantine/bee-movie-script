@@ -164,7 +164,7 @@ body {
 #beeFact {
     position: fixed;
     bottom: 80px;
-    right: 20px;
+    left: 20px;
     padding: 10px 20px;
     background: #edb552;
     border: 2px solid black;
