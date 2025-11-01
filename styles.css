@@ -38,9 +38,9 @@ body {
 
 @keyframes buzz {
     from { transform: translateX(-1px); 
-           transform: translateY(-1px);}
+           }
     to   { transform: translateX(1px); 
-           transform: translateY(1px);}
+           }
 }
 
 /* Flying bees */
