@@ -33,7 +33,7 @@ body {
 
 /* Buzzing hover effect */
 .buzz:hover {
-    animation: buzz 0.05s infinite alternate;
+    animation: buzz 0.075s infinite alternate;
 }
 
 @keyframes buzz {
