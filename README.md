@@ -1,5 +1,5 @@
 # bee-movie-script
-Caleb, I literally just made this for you.
+Caleb, I just made this literally for you.
 
 - Single page site
 - Entire script of Bee Movie displayed on the page
